@@ -1,0 +1,25 @@
+{
+  "name": "Examen-QA",
+  "version": "1.0.0",
+  "description": "Examen final - Aseguramiento de la Calidad del Software (Curso 048, UMG). Pruebas sobre https://buggy.justtestit.org",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:bug": "playwright test --grep @bug",
+    "test:estabilidad": "playwright test --project=chromium --repeat-each=5",
+    "debug": "playwright test --project=chromium --debug",
+    "ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://buggy.justtestit.org",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}
